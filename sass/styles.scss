@@ -1,7 +1,43 @@
+@import "../css/styles.css";
+
 @import "../sass/variables";
 @import "../sass/mixins";
 
-.landing-page {
-  .nav {
+.admin-login {
+  background-color: #706e57;
+  width: 100%;
+  height: 100vh;
+}
+
+.loginForm {
+  width: 50%;
+
+  @include large {
+    width: 50% ;
   }
+
+  @include medium {
+    width: 80%;
+  }
+
+  @include small {
+    width: 100%;
+  }
+}
+.input-group .form-control{
+  background-color: #7e7c67 !important;
+  border: 0;
+  color: white;
+}
+.input-group .form-control::placeholder{
+  color: white;
+  font-family: 'inter' !important;
+}
+.input-group .form-control:focus ,.formContent  .button:focus{
+  box-shadow: none !important;
+}
+.input-group span{
+  color: #f17629;
+  background-color: #7e7c67;
+  border: 0;
 }

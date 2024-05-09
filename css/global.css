@@ -25,7 +25,12 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
 }
 
 body {
@@ -47,7 +52,8 @@ ol {
 }
 
 .sectionS1 {
-    min-height: calc(100vh - 70px)
+    height: 100vh;
+    max-height: 100vh;
 }
 
 .navLinkStyle {

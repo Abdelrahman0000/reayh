@@ -1,1 +1,79 @@
-@import"/css/bootstrap.min.css";@import"https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap";*{padding:0;margin:0;box-sizing:border-box}body{font-size:14px;overflow-x:hidden;font-family:"Inter",sans-serif;color:#000}a{text-decoration:none}ul,ol{padding:0;margin:0;list-style:none}.sectionS1{min-height:calc(100vh - 70px)}.footer{background:#000;padding:10px 0}.footer .footer-content{display:flex;align-items:center;justify-content:space-between}@media(max-width: 796px){.footer .footer-content{flex-direction:column-reverse;gap:30px}}.footer .footer-content .logo img{width:100px}.footer .footer-content p{color:#fff;font-weight:400;margin:0}.footer .footer-content ul{display:flex;align-items:center;gap:20px}.footer .footer-content ul li img{width:35px}
+@import "/css/bootstrap.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+.main-title {
+  font-family: Rounded Mplus 1c Bold;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 60px;
+  text-align: center;
+}
+@media (max-width: 1024px) {
+  .main-title {
+    font-size: 30px;
+  }
+}
+@media (max-width: 796px) {
+  .main-title {
+    font-size: 20px;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  overflow-x: hidden;
+  font-family: "Inter", sans-serif;
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.sectionS1 {
+  min-height: calc(100vh - 70px);
+}
+
+.footer {
+  background: #000;
+  padding: 10px 0;
+}
+.footer .footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 796px) {
+  .footer .footer-content {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+}
+.footer .footer-content .logo img {
+  width: 100px;
+}
+.footer .footer-content p {
+  color: #fff;
+  font-weight: 400;
+  margin: 0;
+}
+.footer .footer-content ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.footer .footer-content ul li img {
+  width: 35px;
+}/*# sourceMappingURL=global.css.map */

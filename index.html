@@ -12,60 +12,46 @@
   <link rel="stylesheet" href="./assets/fontawesome-free/css/all.min.css">
   <link rel="stylesheet" href="./css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/global.css" />
-  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="./sass/styles.css">
+  <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
+  <!-- <link rel="stylesheet" href="./sass/styles.scss" /> -->
 </head>
 
 <body>
   <div class="landing-page">
-    <nav class="navbar navbar-expand-sm navbar-light">
-      <div class="layOut"></div>
-      <div class="container" style="z-index: 2;">
-        <a class="navbar-brand" href="#">
-          <img src="./assets/images/11 1.svg" class="" alt="navIcon" style="width: 180px;">
-        </a>
-        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
-          data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavId">
-          <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-            <li class="nav-item me-3">
-              <a class="nav-link active" href="#" aria-current="page">
-                <img src="./assets/images/home (1) 1.svg" class="" alt="">
-                <span class="visually-hidden">(current)</span></a>
-            </li>
-            <li class="nav-item navLinkStyle me-3">
-              <a class="nav-link " href="#">About Us</a>
-            </li>
-            <li class="nav-item navLinkStyle me-3">
-              <a class="nav-link" href="#">Our service</a>
-            </li>
-            <li class="nav-item navLinkStyle me-3">
-              <a class="nav-link" href="#">Ar</a>
-            </li>
-            <li class="nav-item navLinkStyle me-3">
-              <a class="nav-link " href="#"  style="background-color: #f17629; border-radius: 50px;">logout <i class="fa-solid fa-circle-user"></i>
-              </a>
-            </li>
 
-          </ul>
-        </div>
-      </div>
-    </nav>
 
     <div class="page-content">
 
-      <div class="Home-Page-2">
-
+      <div class="admin-login">
+        <div class="container w-100 h-100">
+          <div class="loginForm  m-auto d-flex flex-column justify-content-between h-100">
+            <div class="logo d-flex justify-content-center">
+              <img src="./assets/images/care white logo 1.svg" class="w-50" alt="">
+            </div>
+            <div class="formContent mx-auto mb-auto w-75">
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-user"></i></span>
+                <input type="text" class="form-control py-3 rounded-3" placeholder="Username" aria-label="Username"
+                  aria-describedby="basic-addon1">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon2"><i class="fa-solid fa-lock"></i></span>
+                <input type="password" class="form-control py-3 rounded-3" placeholder="Password" aria-label="Password"
+                  aria-describedby="basic-addon2">
+              </div>
+              <button class="btn bg-white m-auto d-block w-100" style="color: #f17629;">Login</button>
+            </div>
+            <div class="text-center text-white">
+              <p class="mb-5" style="font-size: 15px !important; font-family: serif;">@ 2024 | <a href="www.the-care.com"
+                  class="text-white text-decoration-underline">www.the-care.com</a> | All rights reserved</p>
+            </div>
+          </div>
+        </div>
 
       </div>
 
     </div>
-
-    <footer class="footer">
-
-    </footer>
   </div>
   <script src="./assets/fontawesome-free/js/all.min.js"></script>
   <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
