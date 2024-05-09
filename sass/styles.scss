@@ -277,6 +277,18 @@
   }
   .small-nav {
     height: 250px;
+    position: relative;
+    .avatar-top {
+      position: absolute;
+      top: 350px;
+      left: 0;
+      width: 63%;
+      height: auto;
+
+      @include medium {
+        top: 300px;
+      }
+    }
     @include small {
       height: 130px;
     }
@@ -492,6 +504,211 @@
     }
   }
 
+  .main-form {
+    border-radius: 15px;
+    width: 100%;
+    padding: 3px 6px;
+    border: 1px solid #bababa;
+    font-family: "Rozha One", serif;
+    .pay-form {
+      font-family: "Inter", sans-serif;
+      .group-bg {
+        position: absolute;
+        top: 50%;
+        right: 0px;
+        z-index: 1;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+      }
+    }
+    .form-content {
+      display: none;
+      &.active {
+        display: block;
+        position: relative;
+        z-index: 5;
+      }
+    }
+    .cridet-card {
+      gap: 10px;
+      .form-group {
+        width: calc(50% - 5px);
+      }
+    }
+    form {
+      border-radius: 15px;
+      border: 1px solid #bababa;
+      padding: 30px;
+      @include small {
+        padding: 15px;
+      }
+      p {
+        color: $c-b;
+        a {
+          color: $c-p;
+        }
+      }
+
+      .next-btn,
+      button {
+        position: relative;
+        z-index: 5;
+        cursor: pointer !important;
+        padding: 0 39px 0 65px;
+        width: 282px;
+        height: 59.64px;
+        border-radius: 8.46p;
+        background-color: $c-p;
+        -webkit-border-radius: 8.46px;
+        -moz-border-radius: 8.46px;
+        -ms-border-radius: 8.46px;
+        -o-border-radius: 8.46px;
+        color: $c-w;
+        font-family: Josefin Sans;
+        font-size: 17.73px;
+        font-weight: 600;
+        line-height: 17.73px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include x-small {
+          width: 200px;
+          font-size: 15px;
+          padding: 0;
+        }
+        i {
+          margin-left: 68px;
+          @include x-small {
+            margin: 0;
+          }
+        }
+      }
+
+      label {
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 30px;
+        text-align: left;
+        margin: 25px 0 3px;
+        color: #706e57;
+        @include medium {
+          font-size: 23px;
+          font-weight: 400;
+          line-height: 40px;
+          text-align: left;
+        }
+        @include small {
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 30px;
+          text-align: left;
+        }
+      }
+      input,
+      select,
+      textarea {
+        position: relative;
+        z-index: 6;
+        background-color: #d9d9d945;
+        color: $c-p;
+        box-shadow: 0px 4px 4px 0px #00000040;
+        resize: none;
+        box-shadow: 0px 4px 4px 0px #00000040;
+      }
+      input::placeholder {
+        color: $c-p; /* Adjust the color as needed */
+      }
+      .input-group {
+        position: relative;
+        img {
+          position: absolute;
+          top: 50%;
+          left: 10px;
+          transform: translateY(-50%);
+          -webkit-transform: translateY(-50%);
+          -moz-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          -o-transform: translateY(-50%);
+          width: 50px;
+        }
+        button {
+          position: absolute;
+          padding: 0 10px;
+          width: 80px;
+          top: 50%;
+          right: 10px;
+          transform: translateY(-50%);
+          -webkit-transform: translateY(-50%);
+          -moz-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          -o-transform: translateY(-50%);
+          font-family: Inter;
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 24.2px;
+          color: $c-p;
+          height: 24.2px;
+          background-color: transparent;
+        }
+        .input-p-left {
+          padding-left: 65px;
+        }
+        .input-p-right {
+          padding-right: 100px;
+        }
+      }
+
+      .card {
+        z-index: 3;
+        position: relative;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        margin-right: 50px;
+        border-radius: 15px;
+        background-color: #f0f0f04d;
+
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+        @include small {
+          margin: 0px;
+        }
+
+        .image {
+          width: 100px;
+          margin: 0 auto 30px;
+
+          img {
+            width: 100%;
+          }
+        }
+        p {
+          font-size: 25px;
+          font-weight: 700;
+          line-height: 30.26px;
+          color: $c-b;
+          margin: 5px;
+          &.active {
+            color: $c-p;
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 36.31px;
+            padding-top: 10px;
+            border-top: 1px solid $c-b;
+          }
+          .price-span {
+            margin-left: auto;
+          }
+        }
+      }
+    }
+  }
   .app {
     font-family: "Josefin Sans", sans-serif !important;
     position: relative;
@@ -504,6 +721,8 @@
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
+    position: relative;
+
     @include medium {
       margin: 100px 80px;
     }

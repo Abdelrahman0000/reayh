@@ -67,3 +67,73 @@ var swiper = new Swiper(".mySwiper", {
     prevEl: ".swiper-button-prev",
   },
 });
+/////////////////////////////
+
+$(document).ready(function () {
+  $("#datepicker,#expire").datepicker({
+    format: "yyyy-mm-dd",
+    autoclose: true,
+  });
+});
+//////////////
+$(".timepicker").timepicker({
+  showMeridian: false, // 24-hour format
+  defaultTime: false, // no default time
+});
+///////////////////// nav avatar
+
+$(document).ready(function () {
+  // Create an image element
+  var img = $("<img>");
+
+  // Add src and alt attributes to the image
+  img.attr("src", "../assets/images/BG1.png");
+  img.attr("alt", "Avatar");
+
+  // Add the 'avatar' class to the image
+  img.addClass("avatar-top");
+
+  // Append the image to the div with class 'small-nav'
+  $(".small-nav").append(img);
+});
+//////////////////////////////
+
+$(document).ready(function () {
+  // Create an image element
+  var footerimg = $("<img>");
+
+  // Add src and alt attributes to the image
+  footerimg.attr("src", "../assets/images/BG2.png");
+  footerimg.attr("alt", "Avatar");
+
+  // Add the 'avatar' class to the image
+  footerimg.addClass("avatar-bottom");
+
+  // Append the image to the div with class 'small-nav'
+  $("footer").append(footerimg);
+});
+/////////////////////////////form parts
+function showContent(contentId) {
+  // Hide all form content
+  var contents = document.querySelectorAll(".form-content");
+  contents.forEach(function (content) {
+    content.classList.remove("active");
+  });
+
+  // Hide all form types
+  var formTypes = document.querySelectorAll(".form-type");
+  formTypes.forEach(function (formType) {
+    formType.classList.remove("active");
+  });
+
+  // Show the selected content and mark the selected form type as active
+  var contentToShow = document.getElementById(contentId);
+  contentToShow.classList.add("active");
+
+  var associatedformType = document.querySelector(
+    ".form-type[onclick=\"showContent('" + contentId + "')\"]"
+  );
+  if (associatedformType) {
+    associatedformType.classList.add("active");
+  }
+}

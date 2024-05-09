@@ -204,8 +204,8 @@ ol {
   }
 }
 .image-logo {
-  width: 200px;
-  height: 150px;
+  width: 150px;
+  height: auto;
   @include small {
     width: 100px;
     height: 100px;
@@ -280,6 +280,21 @@ footer {
   color: #fff;
   background-color: #706e57;
   padding: 30px 160px;
+  position: relative;
+  .avatar-bottom {
+    position: absolute;
+    bottom: 800px;
+    right: 0;
+    width: 63%;
+    height: auto;
+
+    @include medium {
+      bottom: 600px;
+    }
+    @include x-small {
+      bottom: 1000px;
+    }
+  }
   @include medium {
     padding: 30px 80px;
   }
