@@ -16,7 +16,15 @@ body {
   font-family: "Inter", sans-serif;
   color: $c-s;
 }
-
+html[dir="rtl"] {
+  .navbar-brand {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+  }
+  .header-modal {
+    padding-right: 10px;
+  }
+}
 a {
   text-decoration: none;
 }

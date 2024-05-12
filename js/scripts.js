@@ -1,3 +1,24 @@
+///////////////chane lang
+
+// Select the language toggle link
+var langToggle = document.getElementById("langToggle");
+
+// Add click event listener to the language toggle link
+langToggle.addEventListener("click", function (event) {
+  // Prevent default link behavior
+  event.preventDefault();
+
+  // Toggle the direction of HTML
+  var htmlDir = document.documentElement.getAttribute("dir");
+  if (htmlDir === "rtl") {
+    document.documentElement.setAttribute("dir", "ltr");
+    langToggle.textContent = "Ar";
+  } else {
+    document.documentElement.setAttribute("dir", "rtl");
+    langToggle.textContent = "En";
+  }
+});
+
 ///////////////nav
 
 $(document).ready(function () {
@@ -40,6 +61,21 @@ tabs.forEach(function (tab) {
       thirdModal.show();
     }
   });
+});
+//////////////////////////////
+document.querySelector(".join-us").addEventListener("click", function () {
+  // اغلق جميع المودالات المفتوحة
+  var openModals = document.querySelectorAll(".modal.show");
+  openModals.forEach(function (modal) {
+    var modalInstance = bootstrap.Modal.getInstance(modal);
+    if (modalInstance) {
+      modalInstance.hide();
+    }
+  });
+
+  // افتح المودال الأول بمجرد النقر على "join us"
+  var firstModal = new bootstrap.Modal(document.getElementById("firstModal"));
+  firstModal.show();
 });
 
 /////////////////readmore btn
