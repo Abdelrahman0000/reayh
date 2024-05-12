@@ -3,6 +3,9 @@
 
 .landing-page {
   .intro {
+    a {
+      cursor: pointer;
+    }
     margin: 0 !important;
     width: 100%;
     height: 100vh;
@@ -18,263 +21,264 @@
     background-size: cover;
 
     background-repeat: no-repeat;
-    .modal-content {
-      border-radius: 5px;
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      -ms-border-radius: 5px;
-      -o-border-radius: 5px;
-      overflow: hidden;
+  }
+  .modal-content {
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    overflow: hidden;
+  }
+  .custom-modal-size {
+    width: 580px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include small {
+      width: 90%;
+      margin: auto;
+      margin-top: 20px;
+      margin-bottom: 20px;
     }
-    .custom-modal-size {
-      width: 580px;
-      height: 500px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+  }
 
-      @include small {
-        width: 90%;
-        margin: auto;
-        margin-top: 20px;
-        margin-bottom: 20px;
-      }
+  .header-modal {
+    background-color: $c-b;
+    display: flex;
+    align-items: center;
+    color: $c-w;
+
+    height: 60px;
+    padding-left: 10px;
+    h1 {
+      font-size: 16px;
+      font-weight: 300;
+      margin-left: 5px;
     }
+  }
 
-    .header-modal {
-      background-color: $c-b;
-      display: flex;
-      align-items: center;
-      color: $c-w;
+  .image-icon {
+    width: 22px;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-      height: 60px;
-      padding-left: 10px;
-      h1 {
-        font-size: 16px;
-        font-weight: 300;
-        margin-left: 5px;
-      }
-    }
-
-    .image-icon {
-      width: 22px;
-      height: 33px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      img {
-        width: 100%;
-        height: 100%;
-      }
-    }
-
-    .body-header-modal {
-      //height: 40px;
-      // width: 500px;
-      font-weight: 600;
-      font-size: 40px;
-      line-height: 30px;
-      // text-align: left;
-      margin: 15px 0;
-      padding: 0 10px;
-      font-family: Rozha One;
-      p {
-        font-size: 16px;
-        font-family: Josefin Sans;
-        font-weight: 300;
-        margin: 0;
-        span {
-          font-weight: 700;
-        }
-      }
-    }
-
-    .body--modal {
-      display: flex;
-      flex-direction: column;
+    img {
+      width: 100%;
       height: 100%;
     }
+  }
 
-    .use-diff-num {
-      font-size: 18px;
-      font-weight: 600;
+  .body-header-modal {
+    //height: 40px;
+    // width: 500px;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 30px;
+    // text-align: left;
+    margin: 15px 0;
+    padding: 0 10px;
+    font-family: Rozha One;
+    p {
+      font-size: 16px;
       font-family: Josefin Sans;
-      color: $c-p;
-      text-align: left;
-      padding: 0 10px;
-    }
-
-    .group-inputs {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      margin: 16px 0;
-      padding: 0 10px;
-      justify-content: space-between;
-      @include small {
-        flex-direction: column;
-        margin: 0;
-        .one-input {
-          width: 100%;
-          margin: 16px 0;
-        }
-      }
-    }
-
-    .one-input {
-      width: 48%;
-      height: 65px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      line-height: 14px;
-      border: 1px solid #e5e5e5;
-      border-radius: 5px;
-      padding: 5px;
-
-      label {
-        margin: 0;
-        font-size: 12px;
-        text-transform: capitalize;
-      }
-
-      input {
-        width: 100%;
-        font-size: 14px;
-        height: 100%;
-        outline: none;
-        padding-left: 5px;
-        border: none;
-      }
-    }
-
-    .button-style {
-      margin: 50px auto;
-      background-color: $c-p;
-      width: 235px;
-      height: 50px;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      a {
-        color: $c-w;
-        font-size: 22px;
-        font-weight: 500;
-        text-decoration: underline;
-        text-transform: capitalize;
-      }
-    }
-
-    .one-input-passcode {
-      width: 95%;
-      margin: 10px auto;
-      height: 80px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      line-height: 14px;
-      border: 1px solid #e5e5e5;
-      border-radius: 5px;
-      padding: 5px 10px;
-
-      label {
-        margin: 0;
-        font-size: 12px;
-        text-transform: capitalize;
-      }
-
-      input {
-        width: 100%;
-        font-size: 16px;
-        height: 100%;
-        outline: none;
-        padding-left: 5px;
-        border: none;
-      }
-    }
-
-    .image-congrate {
-      margin: 10px auto;
-      width: 66px;
-      height: 80px;
-      img {
-        width: 100%;
-        height: 100%;
-      }
-    }
-
-    .text-congrate {
-      font-size: 50px;
-      font-weight: 700;
-      line-height: 50px;
-      text-align: center;
-      font-family: Rozha One;
-      color: rgba(0, 0, 0, 0.42);
-      @include small {
-        font-size: 35px;
-      }
-    }
-    .text-created-account {
       font-weight: 300;
-      font-size: 20px;
-      font-family: Josefin Sans;
-      text-align: center;
-    }
-
-    .page-content {
-      min-height: 700px;
-    }
-
-    .btns-group {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 30px;
-      margin: 20px auto;
-      width: 80%;
-      @include x-small {
-        display: flex;
-        flex-direction: column;
-        width: 90%;
-      }
-      @include small {
-        display: flex;
-        width: 95%;
-        flex-direction: column;
+      margin: 0;
+      span {
+        font-weight: 700;
       }
     }
+  }
 
-    .btn-secondary {
-      width: 360px;
-      height: 50px;
-      border-radius: 10px;
-      background-color: $c-b;
-      color: $c-w;
-      text-decoration: underline;
-      font-size: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+  .body--modal {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .use-diff-num {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: Josefin Sans;
+    color: $c-p;
+    text-align: left;
+    padding: 0 10px;
+  }
+
+  .group-inputs {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 16px 0;
+    padding: 0 10px;
+    justify-content: space-between;
+    @include small {
+      flex-direction: column;
+      margin: 0;
+      .one-input {
+        width: 100%;
+        margin: 16px 0;
+      }
+    }
+  }
+
+  .one-input {
+    width: 48%;
+    height: 65px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 14px;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    padding: 5px;
+
+    label {
+      margin: 0;
+      font-size: 12px;
       text-transform: capitalize;
     }
 
-    .btn-primary {
-      width: 360px;
-      height: 50px;
-      border-radius: 10px;
-      background-color: $c-p;
+    input {
+      width: 100%;
+      font-size: 14px;
+      height: 100%;
+      outline: none;
+      padding-left: 5px;
+      border: none;
+    }
+  }
+
+  .button-style {
+    margin: 50px auto;
+    background-color: $c-p;
+    width: 235px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a {
       color: $c-w;
+      font-size: 22px;
+      font-weight: 500;
       text-decoration: underline;
-      font-size: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       text-transform: capitalize;
     }
   }
+
+  .one-input-passcode {
+    width: 95%;
+    margin: 10px auto;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 14px;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    padding: 5px 10px;
+
+    label {
+      margin: 0;
+      font-size: 12px;
+      text-transform: capitalize;
+    }
+
+    input {
+      width: 100%;
+      font-size: 16px;
+      height: 100%;
+      outline: none;
+      padding-left: 5px;
+      border: none;
+    }
+  }
+
+  .image-congrate {
+    margin: 10px auto;
+    width: 66px;
+    height: 80px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .text-congrate {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 50px;
+    text-align: center;
+    font-family: Rozha One;
+    color: rgba(0, 0, 0, 0.42);
+    @include small {
+      font-size: 35px;
+    }
+  }
+  .text-created-account {
+    font-weight: 300;
+    font-size: 20px;
+    font-family: Josefin Sans;
+    text-align: center;
+  }
+
+  .page-content {
+    min-height: 700px;
+  }
+
+  .btns-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px auto;
+    width: 80%;
+    @include x-small {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+    }
+    @include small {
+      display: flex;
+      width: 95%;
+      flex-direction: column;
+    }
+  }
+
+  .btn-secondary {
+    width: 360px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: $c-b;
+    color: $c-w;
+    text-decoration: underline;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+  }
+
+  .btn-primary {
+    width: 360px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: $c-p;
+    color: $c-w;
+    text-decoration: underline;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+  }
+
   .small-nav {
     height: 250px;
     position: relative;

@@ -16,7 +16,7 @@
 
   <body>
     <div class="landing-page">
-      <div class=" intro small-nav">
+      <div class=" intro  small-nav">
         <!--navbar-->
         <nav class="navbar navbar-expand-lg">
           <div class="container-fluid">
@@ -60,20 +60,172 @@
                   <a class="nav-link" href="#">Gallery</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Ar</a>
+                  <a class="nav-link" href="#" id="langToggle">Ar</a>
                 </li>
 
+                <!-- Add data-bs-toggle and data-bs-target attributes to the "join us" link -->
                 <li class="join-us">
-                  <a class="nav-link" href="#">join us </a><img
-                    src="./assets/icons/user (2) 1.svg" alt />
+                  <a class="nav-link" href="#" id="joinUsLink"
+                    data-bs-toggle="modal" data-bs-target="#firstModal">join
+                    us</a>
+                  <img src="./assets/icons/user (2) 1.svg" alt />
                 </li>
               </ul>
             </div>
+
           </div>
         </nav>
-
         <!-- First Modal -->
+        <div
+          class="modal fade"
+          id="firstModal"
+          tabindex="-1"
+          aria-labelledby="firstModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered custom-modal-size">
+            <div class="modal-content">
+              <!--Header Modal--->
+              <div class="header-modal">
+                <div class="image-icon">
+                  <img src="./assets/icons/arrow 1.svg" alt="arrow" />
+                </div>
+                <h1 id="staticBackdropLabel">sign up & care community</h1>
+              </div>
+              <!--Body Modal-->
+              <div class="body--modal">
+                <div class="body-header-modal">login/signup</div>
 
+                <form action>
+                  <!--inputs-->
+                  <div class="group-inputs">
+                    <div class="one-input">
+                      <label>name</label>
+                      <input type="text" placeholder="name" />
+                    </div>
+
+                    <div class="one-input">
+                      <label>phone number</label>
+                      <input type="text" placeholder="000 000 000" />
+                    </div>
+                  </div>
+
+                  <div class="group-inputs">
+                    <div class="one-input">
+                      <label>id number</label>
+                      <input type="text" placeholder="000000000" />
+                    </div>
+                    <div class="one-input">
+                      <label>national address id</label>
+                      <input type="text" placeholder="000000000" />
+                    </div>
+                  </div>
+
+                  <!--button verify-->
+                  <div class="nav nav-pills button-style" id="tabContainer">
+                    <a
+                      class="navLink btn-primary"
+                      onclick="hideFirstModalAndShowSecondModal()">verify</a>
+                  </div>
+                </form>
+              </div>
+              <!--Footer Modal -->
+            </div>
+          </div>
+        </div>
+        <!-- -------------------------------------------------------------- -->
+
+        <!-- -------------------------------------------------------------- -->
+        <!-- Second Modal -->
+        <div
+          class="modal fade"
+          id="secondModal"
+          tabindex="-1"
+          aria-labelledby="secondModalLabel"
+          aria-hidden="true">
+          <div
+            class="modal-dialog modal-dialog-centered rounded custom-modal-size">
+            <div class="modal-content">
+              <!--Header Modal--->
+              <div class="header-modal">
+                <div class="image-icon">
+                  <img src="./assets/icons/arrow 1.svg" alt="arrow" />
+                </div>
+                <h1 id="staticBackdropLabel">sign up & care community</h1>
+              </div>
+              <!--Body Modal-->
+              <div class="body--modal">
+                <div class="body-header-modal">
+                  share OTP
+                  <p>
+                    we have sent a temporary passcode to you at
+                    <span> test@gmail.com </span>
+                  </p>
+                </div>
+
+                <div class="use-diff-num">Use a diffrent number</div>
+
+                <form action>
+                  <!--inputs-->
+                  <div class="group-passcode">
+                    <div class="one-input-passcode">
+                      <label>Enter your 4-digit passcode </label>
+                      <input type="text" placeholder="0   0   0   0" />
+                    </div>
+                  </div>
+
+                  <!--button verify-->
+                  <div class="nav nav-pills button-style" id="tabContainer">
+                    <a
+                      class="navLink btn-primary"
+                      onclick="hideSecondModalAndShowThirdModal()">Submit</a>
+                  </div>
+                </form>
+              </div>
+              <!--Footer Modal -->
+            </div>
+          </div>
+        </div>
+        <!-- -------------------------------------------------------------- -->
+
+        <!---Third Modal--->
+        <div
+          class="modal fade"
+          id="thirdModal"
+          tabindex="-1"
+          aria-labelledby="thirdModalLabel"
+          aria-hidden="true">
+          <div
+            class="modal-dialog modal-dialog-centered rounded custom-modal-size">
+            <div class="modal-content">
+              <!--Header Modal--->
+              <div class="header-modal">
+                <div class="image-icon">
+                  <img src="./assets/icons/arrow 1.svg" alt="arrow" />
+                </div>
+                <h1 id="staticBackdropLabel">sign up & care community</h1>
+              </div>
+              <!--Body Modal-->
+              <div class="body--modal">
+                <!--image-congrate-->
+                <div class="image-congrate">
+                  <img
+                    src="./assets/icons/party-popper 1.png"
+                    alt="congrat-app" />
+                </div>
+
+                <!--text-congrate-->
+                <div class="text-congrate">Congratulations</div>
+
+                <p class="text-created-account mt-4">Account Created</p>
+                <!--button verify-->
+                <div class="button-style">
+                  <a onclick="hideThirdModal()">continue</a>
+                </div>
+              </div>
+              <!--Footer Modal -->
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="page-content">

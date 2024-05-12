@@ -65,10 +65,14 @@
                   <a class="nav-link" href="#" id="langToggle">Ar</a>
                 </li>
 
-                <li class="join-us log-in">
-                  <a class="nav-link " href="#">join us </a><img
-                    src="./assets/icons/user (2) 1.svg" alt />
+                <!-- Add data-bs-toggle and data-bs-target attributes to the "join us" link -->
+                <li class="join-us">
+                  <a class="nav-link" href="#" id="joinUsLink"
+                    data-bs-toggle="modal" data-bs-target="#firstModal">join
+                    us</a>
+                  <img src="./assets/icons/user (2) 1.svg" alt />
                 </li>
+
               </ul>
             </div>
           </div>
@@ -82,8 +86,9 @@
             <a href class="btn-primary">explore more</a>
             <a
               class="navLink btn-secondary log-in"
-              data-bs-toggle="pill"
-              href="#firstTab">request service</a>
+              id="joinUsLink"
+              data-bs-toggle="modal" data-bs-target="#firstModal">request
+              service</a>
           </div>
         </div>
 
@@ -136,8 +141,7 @@
                   <div class="nav nav-pills button-style" id="tabContainer">
                     <a
                       class="navLink btn-primary"
-                      data-bs-toggle="pill"
-                      href="#secondTab">verify</a>
+                      onclick="hideFirstModalAndShowSecondModal()">verify</a>
                   </div>
                 </form>
               </div>
@@ -190,14 +194,14 @@
                   <div class="nav nav-pills button-style" id="tabContainer">
                     <a
                       class="navLink btn-primary"
-                      data-bs-toggle="pill"
-                      href="#thirdTab">Submit</a>
+                      onclick="hideSecondModalAndShowThirdModal()">Submit</a>
                   </div>
                 </form>
               </div>
               <!--Footer Modal -->
             </div>
           </div>
+
         </div>
         <!-- -------------------------------------------------------------- -->
 
@@ -233,11 +237,12 @@
                 <p class="text-created-account mt-4">Account Created</p>
                 <!--button verify-->
                 <div class="button-style">
-                  <a href type="submit">continue</a>
+                  <a onclick="hideThirdModal()">continue</a>
                 </div>
               </div>
               <!--Footer Modal -->
             </div>
+
           </div>
         </div>
       </div>
