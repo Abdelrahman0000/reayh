@@ -80,6 +80,7 @@
 
           </div>
         </nav>
+
         <!-- First Modal -->
         <div
           class="modal fade"
@@ -98,40 +99,74 @@
               </div>
               <!--Body Modal-->
               <div class="body--modal">
-                <div class="body-header-modal">login/signup</div>
+                <div class="body-header-modal btns-group"> <div
+                    class="sign-type active col-md-3 col-4 btn signup-btn"
+                    onclick="showContent('content-a')">signup</div>
 
-                <form action>
-                  <!--inputs-->
-                  <div class="group-inputs">
-                    <div class="one-input">
-                      <label>name</label>
-                      <input type="text" placeholder="name" />
-                    </div>
+                  <div class="sign-type col-md-3 col-4 btn signin-btn"
+                    onclick="showContent('content-b')">signin</div></div>
+                <div class="sign-contents">
 
-                    <div class="one-input">
-                      <label>phone number</label>
-                      <input type="text" placeholder="000 000 000" />
-                    </div>
+                  <div class="sign-content active" id="content-a">
+                    <div class="body-header-modal">signup</div>
+                    <form action>
+                      <!--inputs-->
+                      <div class="group-inputs">
+                        <div class="one-input">
+                          <label>name</label>
+                          <input type="text" placeholder="name" />
+                        </div>
+
+                        <div class="one-input">
+                          <label>phone number</label>
+                          <input type="text" placeholder="000 000 000" />
+                        </div>
+                      </div>
+
+                      <div class="group-inputs">
+                        <div class="one-input">
+                          <label>id number</label>
+                          <input type="text" placeholder="000000000" />
+                        </div>
+                        <div class="one-input">
+                          <label>national address id</label>
+                          <input type="text" placeholder="000000000" />
+                        </div>
+                      </div>
+
+                      <!--button verify-->
+                      <div class="nav nav-pills button-style" id="tabContainer">
+                        <a
+                          class="navLink btn-primary"
+                          onclick="hideFirstModalAndShowSecondModal()">verify</a>
+                      </div>
+                    </form>
                   </div>
+                  <div class="sign-content" id="content-b">
+                    <div class="body-header-modal">login</div>
+                    <form action>
+                      <!--inputs-->
+                      <div class="group-inputs">
+                        <div class="one-input">
+                          <label>name</label>
+                          <input type="text" placeholder="name" />
+                        </div>
 
-                  <div class="group-inputs">
-                    <div class="one-input">
-                      <label>id number</label>
-                      <input type="text" placeholder="000000000" />
-                    </div>
-                    <div class="one-input">
-                      <label>national address id</label>
-                      <input type="text" placeholder="000000000" />
-                    </div>
-                  </div>
+                        <div class="one-input">
+                          <label>phone number</label>
+                          <input type="text" placeholder="000 000 000" />
+                        </div>
+                      </div>
 
-                  <!--button verify-->
-                  <div class="nav nav-pills button-style" id="tabContainer">
-                    <a
-                      class="navLink btn-primary"
-                      onclick="hideFirstModalAndShowSecondModal()">verify</a>
+                      <!--button verify-->
+                      <div class="nav nav-pills button-style" id="tabContainer">
+                        <a
+                          class="navLink btn-primary"
+                          onclick="hideFirstModalAndShowSecondModal()">verify</a>
+                      </div>
+                    </form>
                   </div>
-                </form>
+                </div>
               </div>
               <!--Footer Modal -->
             </div>

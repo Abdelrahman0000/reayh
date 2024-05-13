@@ -44,7 +44,28 @@
       margin-bottom: 20px;
     }
   }
-
+  .sign-content {
+    display: none;
+    img {
+      width: 100%;
+    }
+  }
+  .sign-content.active {
+    display: block;
+  }
+  .signin-btn,
+  .signup-btn {
+    width: calc(50% - 10px);
+    height: 34px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: $c-p;
+    color: $c-w;
+  }
+  .signup-btn {
+    background-color: $c-b;
+  }
   .header-modal {
     background-color: $c-b;
     display: flex;

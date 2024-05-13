@@ -208,3 +208,29 @@ function showContent(contentId) {
     associatedformType.classList.add("active");
   }
 }
+/////////////////////// signup form switch
+
+function showContent(contentId) {
+  // Hide all sign content
+  var contents = document.querySelectorAll(".sign-content");
+  contents.forEach(function (content) {
+    content.classList.remove("active");
+  });
+
+  // Hide all sign types
+  var signTypes = document.querySelectorAll(".sign-type");
+  signTypes.forEach(function (signType) {
+    signType.classList.remove("active");
+  });
+
+  // Show the selected content and mark the selected sign type as active
+  var contentToShow = document.getElementById(contentId);
+  contentToShow.classList.add("active");
+
+  var associatedsignType = document.querySelector(
+    ".sign-type[onclick=\"showContent('" + contentId + "')\"]"
+  );
+  if (associatedsignType) {
+    associatedsignType.classList.add("active");
+  }
+}
