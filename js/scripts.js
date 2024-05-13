@@ -183,6 +183,7 @@ $(document).ready(function () {
   // Append the image to the div with class 'small-nav'
   $("footer").append(footerimg);
 });
+
 /////////////////////////////form parts
 function showContent(contentId) {
   // Hide all form content
@@ -210,7 +211,7 @@ function showContent(contentId) {
 }
 /////////////////////// signup form switch
 
-function showContent(contentId) {
+function showSign(contentId) {
   // Hide all sign content
   var contents = document.querySelectorAll(".sign-content");
   contents.forEach(function (content) {
@@ -228,7 +229,7 @@ function showContent(contentId) {
   contentToShow.classList.add("active");
 
   var associatedsignType = document.querySelector(
-    ".sign-type[onclick=\"showContent('" + contentId + "')\"]"
+    ".sign-type[onclick=\"showSign('" + contentId + "')\"]"
   );
   if (associatedsignType) {
     associatedsignType.classList.add("active");
