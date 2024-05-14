@@ -29,7 +29,7 @@ langToggle.addEventListener("click", function (event) {
 
 ////////////////modal
 // Function to hide the first modal and show the second modal
-function hideFirstModalAndShowSecondModal() {
+function hideSignUpShowSecondModal() {
   var firstModal = document.getElementById("firstModal");
   var secondModal = document.getElementById("secondModal");
 
@@ -40,6 +40,19 @@ function hideFirstModalAndShowSecondModal() {
   // Show the second modal
   var secondModalInstance = new bootstrap.Modal(secondModal);
   secondModalInstance.show();
+
+  // Remove the backdrop element
+  var backdrop = document.querySelector(".modal-backdrop");
+  backdrop.parentNode.removeChild(backdrop);
+}
+
+// Function to sign In the third modal
+function hideSignInModal() {
+  var signinModal = document.getElementById("firstModal");
+
+  // Remove "show" class and add display: none inline style to hide the third modal
+  signinModal.classList.remove("show");
+  signinModal.style.display = "none";
 
   // Remove the backdrop element
   var backdrop = document.querySelector(".modal-backdrop");
