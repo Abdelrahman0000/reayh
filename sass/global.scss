@@ -274,16 +274,6 @@ ol {
   }
 }
 
-.public-paragraph::after {
-  content: "";
-  position: absolute;
-  bottom: 25%;
-  right: -10px;
-  height: 2px;
-  width: 50px;
-  background-color: $c-b;
-}
-
 footer {
   color: #fff;
   background-color: #706e57;
