@@ -151,6 +151,7 @@
   .one-input {
     width: 48%;
     height: 65px;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -158,7 +159,7 @@
     border: 1px solid #e5e5e5;
     border-radius: 5px;
     padding: 5px;
-
+    margin-bottom: 20px;
     label {
       margin: 0;
       font-size: 12px;
@@ -197,6 +198,7 @@
     width: 95%;
     margin: 10px auto;
     height: 80px;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -851,4 +853,7 @@
       }
     }
   }
+}
+.form-group {
+  position: relative;
 }

@@ -445,3 +445,24 @@ footer {
     }
   }
 }
+
+////////////////////
+///
+///
+///
+///
+
+.error {
+  position: absolute;
+
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  border-radius: 4px;
+  width: 100%;
+  right: 0px !important;
+  font-size: 0.8em;
+  top: 100% !important;
+  margin-top: 5px;
+  padding: 5px;
+}
