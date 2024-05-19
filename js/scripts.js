@@ -8,17 +8,6 @@ $(document).ready(function () {
 
 ///////////////chane lang
 
-document
-  .querySelector(".sign-form .sign-btn") // Changed selector to target the button with the correct class
-  .addEventListener("click", function (e) {
-    if (validateSignA()) {
-      e.preventDefault(); // Prevent default form submission behavior
-      console.log(1);
-      document.getElementById("Sign").submit();
-    }
-  });
-
-//////////////////////////////
 // Select the language toggle link
 var langToggle = document.getElementById("langToggle");
 
@@ -38,6 +27,30 @@ langToggle.addEventListener("click", function (event) {
   }
 });
 
+/////////////////////////////
+
+////////////////////////////////gallery swiper
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 4.2,
+  spaceBetween: 30,
+  loop: true, // Add this line to enable infinite loop
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+/////////////////////////
+document
+  .querySelector(".sign-form .sign-btn") // Changed selector to target the button with the correct class
+  .addEventListener("click", function (e) {
+    if (validateSignA()) {
+      e.preventDefault(); // Prevent default form submission behavior
+      console.log(1);
+      document.getElementById("Sign").submit();
+    }
+  });
+
+//////////////////////////////
 ////////////////modal
 // Function to hide the first modal and show the second modal
 function hideSignUpShowSecondModal() {
@@ -123,16 +136,6 @@ function toggleDescription() {
   }
 }
 ////////////////////////////////
-////////////////////////////////gallery swiper
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 4.2,
-  spaceBetween: 30,
-  loop: true, // Add this line to enable infinite loop
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
 ///////////////////////////// modal in about
 // document.addEventListener("DOMContentLoaded", function () {
 //   // Get Join Us button

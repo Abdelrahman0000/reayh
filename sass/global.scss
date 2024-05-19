@@ -4,6 +4,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rozha+One&display=swap");
+
+@font-face {
+  font-family: "NeoSansW23";
+  src: url("/assets/alfont_com_NeoSansW23-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -17,6 +25,7 @@ body {
   color: $c-s;
 }
 html[dir="rtl"] {
+  font-family: "NeoSansW23", sans-serif !important ;
   .navbar-brand {
     margin-left: auto !important;
     margin-right: 0 !important;
@@ -168,6 +177,26 @@ ol {
 // }
 .navbar {
   background-color: transparent;
+  .nav-item {
+    margin: 0 10px;
+  }
+  .nav-link {
+    font-family: Rozha One;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 60px;
+    text-align: center;
+    color: $c-b;
+    @include small {
+      font-size: 17px;
+      line-height: 100%;
+    }
+    &.active {
+      text-decoration: none;
+      border: none;
+      color: $c-b;
+    }
+  }
 }
 
 .navbar-nav {
@@ -200,6 +229,8 @@ ol {
   border-radius: 100px;
   padding: 8px 8px 8px 15px;
   background-color: $c-p;
+  font-family: Inter;
+
   display: flex;
   align-items: center;
   @include medium {
@@ -209,6 +240,12 @@ ol {
     text-transform: capitalize;
     color: $c-w;
     text-decoration: underline;
+
+    font-size: 13.99px !important;
+    font-weight: 500;
+    line-height: 19.99px !important;
+    text-align: left;
+    color: $c-w !important;
   }
 }
 .image-logo {
@@ -277,8 +314,22 @@ ol {
 footer {
   color: #fff;
   background-color: #706e57;
-  padding: 30px 160px;
+  overflow: hidden;
   position: relative;
+  .footer-top {
+    padding: 30px 160px !important;
+    @include small {
+      padding: 20px 25px !important;
+    }
+  }
+  .footer-bottom {
+    padding: 20px 75px !important;
+    border-top: 5px solid $c-p;
+    @include small {
+      padding: 20px 25px !important;
+      border-top: 5px solid $c-p;
+    }
+  }
   .avatar-bottom {
     position: absolute;
     bottom: 800px;
@@ -365,9 +416,12 @@ footer {
     margin-bottom: 0rem;
   }
   .social-links {
-    direction: rtl;
+    display: flex;
+    justify-content: end;
+
     @include medium {
-      direction: ltr;
+      justify-content: center;
+      margin: 30px 0;
     }
   }
   .social-links a {
