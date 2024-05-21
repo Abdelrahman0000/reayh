@@ -51,6 +51,7 @@ document
   });
 
 //////////////////////////////
+
 ////////////////modal
 // Function to hide the first modal and show the second modal
 function hideSignUpShowSecondModal() {
@@ -173,50 +174,6 @@ function toggleDescription() {
 //   // Add click event listener for navLinks inside second modal
 //   // Implement the transition to the third modal similarly
 // });
-///////////////////
-$(document).ready(function () {
-  $("#datepicker,#expire").datepicker({
-    format: "yyyy-mm-dd",
-    autoclose: true,
-  });
-});
-//////////////
-$(".timepicker").timepicker({
-  showMeridian: false, // 24-hour format
-  defaultTime: false, // no default time
-});
-///////////////////// nav avatar
-
-$(document).ready(function () {
-  // Create an image element
-  var img = $("<img>");
-
-  // Add src and alt attributes to the image
-  img.attr("src", "../assets/images/BG1.png");
-  img.attr("alt", "Avatar");
-
-  // Add the 'avatar' class to the image
-  img.addClass("avatar-top");
-
-  // Append the image to the div with class 'small-nav'
-  $(".small-nav").append(img);
-});
-//////////////////////////////
-
-$(document).ready(function () {
-  // Create an image element
-  var footerimg = $("<img>");
-
-  // Add src and alt attributes to the image
-  footerimg.attr("src", "../assets/images/BG2.png");
-  footerimg.attr("alt", "Avatar");
-
-  // Add the 'avatar' class to the image
-  footerimg.addClass("avatar-bottom");
-
-  // Append the image to the div with class 'small-nav'
-  $("footer").append(footerimg);
-});
 
 /////////////////////////////form parts
 function showContent(contentId) {
