@@ -10,7 +10,7 @@
   z-index: 1;
 
   @include medium {
-    top: 300px;
+    top: 0px;
     width: 63%;
   }
 }
@@ -22,7 +22,7 @@
   height: auto;
   z-index: 1;
   @include medium {
-    top: 450px;
+    top: 500px;
     width: 60%;
   }
 }
